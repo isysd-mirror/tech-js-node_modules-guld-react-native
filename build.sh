@@ -3,16 +3,16 @@ mkdir -p assets/js
 mkdir -p assets/css
 mkdir -p assets/images
 
-linklib () {
+cpasset () {
     if [ ! -e assets/$2/$3 ]; then
         
-        ln -s $HOME/$1/$3 assets/$2/$3
+        cp $HOME/$1/$3 assets/$2/$3
     fi
 }
 
-linklib tech/js/node_modules/openpgp/dist js openpgp.min.js
-linklib tech/js/node_modules/git-config-ini js ini.min.js
-linklib Pictures/guld/logo images favicon.png
-linklib Pictures/guld/logo images logo.svg
-linklib Pictures/guld/logo images ico.svg
+cpasset tech/js/node_modules/openpgp/dist js openpgp.min.js
+cpasset tech/js/node_modules/git-config-ini js ini.min.js
+cpasset Pictures/guld/logo images favicon.png
+cpasset Pictures/guld/logo images logo.svg
+cpasset Pictures/guld/logo images ico.svg
 
